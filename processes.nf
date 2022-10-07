@@ -24,7 +24,7 @@ set -e
 
 echo Processing sample : '${sample_name}'
 
-ngscheckmate_fastq \
+/usr/local/NGSCheckMate/ngscheckmate_fastq \
     -1 "${R1}" \
     -2 "${R2}" \
     ref.pt \
@@ -48,7 +48,7 @@ process join {
 
 set -e
 
-python vaf_ncm.py -f -I inputs -O output -N NGSCheckMate.results
+python /usr/local/NGSCheckMate/vaf_ncm.py -f -I inputs -O output -N NGSCheckMate.results
 """
 
 }
