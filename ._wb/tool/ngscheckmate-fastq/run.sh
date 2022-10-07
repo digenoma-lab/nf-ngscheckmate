@@ -12,7 +12,7 @@ echo Starting workflow
 nextflow \
     run \
     "${TOOL_REPO}/main.nf" \
-    --paired_fastq_path "${fastq_folder}/${FASTQ_PATTERN}" \
+    --paired_fastq_path "${FASTQ_FOLDER}/${FASTQ_PATTERN}" \
     -params-file ._wb/tool/params.json \
     -resume
 
