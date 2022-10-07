@@ -1,0 +1,33 @@
+{
+    "$schema": "https://raw.githubusercontent.com/FredHutch/bash-workbench/main/docs/schema.json",
+    "name": "NGSCheckMate - FASTQ",
+    "description": "Check if FASTQ data is from the same individual",
+    "args": {
+        "outdir": {
+            "help": "Location for output files to be written",
+            "default": "./",
+            "wb_type": "folder"
+        },
+        "fastq_folder": {
+            "help": "Folder containing FASTQ files",
+            "wb_env": "FASTQ_FOLDER",
+            "wb_type": "file"
+        },
+        "fastq_pattern": {
+            "help": "Pattern of FASTQ pair filenames",
+            "default": "*.R{1,2}.fastq.gz",
+            "wb_env": "FASTQ_PATTERN",
+            "wb_type": "string"
+        },
+        "cpus": {
+            "help": "Number of CPUs to use for each task",
+            "default": "16",
+            "wb_type": "integer"
+        },
+        "memory_gb": {
+            "help": "Memory (RAM) to use for each task (GBs)",
+            "default": "64",
+            "wb_type": "integer"
+        }
+    }
+}
