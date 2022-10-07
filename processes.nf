@@ -42,13 +42,14 @@ process join {
     path "inputs/"
 
     output:
-    path "output/*"
+    path "*"
 
 """#!/bin/bash
 
 set -e
 
 python /usr/local/NGSCheckMate/vaf_ncm.py -f -I inputs -O output -N NGSCheckMate.results
+mv output/* ./
 """
 
 }
