@@ -42,3 +42,9 @@ file name and `2` in the read 2 file name.
 - `paired_fastq_path`:          Sample sheet CSV indicating the location of all input files (cannot use with --paired_fastq_samplesheet)
 - `outdir`:                     Location for output file (`NGSCheckMate.results.csv`) to be written
 - `ref`:                        Binary pattern file used as a reference (default: https://github.com/parklab/NGSCheckMate/raw/master/SNP/SNP.pt)
+
+## nextflow run
+
+```
+nextflow run nf-ngscheckmate/main.nf  --outdir sr-mates --paired_fastq_samplesheet samples_paired_ngscheck.txt  -profile kutral
+```
